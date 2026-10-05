@@ -265,8 +265,6 @@ Rails.application.routes.draw do
 
   get 'translations', to: redirect('translations/status', status: 302)
   get 'translations/status' => 'translations#index'
-  get 'translations/edit' => 'translations#edit'
-  patch 'translations/update' => 'translations#update'
 
   get 'about' => 'static_pages#about'
   get 'documents' => 'static_pages#documents'
@@ -374,9 +372,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/persons/:wca_id/results' => 'persons#results', as: :person_results
       get '/persons/:wca_id/records' => 'persons#records', as: :person_records
+      get '/geocoding/search' => 'geocoding#search', as: :geocoding_search
 
       resources :competitions, only: [] do
         resources :scoretakers, only: %i[index create destroy], controller: 'scoretakers'
+        resource :bookmark, only: %i[show create destroy]
         namespace :live do
           get '/rounds/:round_id' => 'live#round_results', as: :live_round_results
           put '/rounds/:round_id/open' => "live#open_round", as: :live_round_open
