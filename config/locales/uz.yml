@@ -651,7 +651,7 @@ uz:
       applications:
         help:
           https_info: "Host 'localhost' bo'lmasa, HTTPS talab qilinadi"
-          scopes_html: 'Ruxsat doiralarini bo\'sh joy bilan ajrating. Standart ruxsat doiralaridan foydalanish uchun bo\'sh qoldiring. Qo\'llab-quvvatlanadigan ruxsat doiralari ro\'yxatini <a href="https://github.com/thewca/worldcubeassociation.org/blob/main/config/initializers/doorkeeper.rb#L4-L10" target="_blank">bu yerdan</a> ko\'ring.'
+          scopes_html: "Ruxsat doiralarini bo'sh joy bilan ajrating. Standart ruxsat doiralaridan foydalanish uchun bo'sh qoldiring. Qo'llab-quvvatlanadigan ruxsat doiralari ro'yxatini <a href='https://github.com/thewca/worldcubeassociation.org/blob/main/config/initializers/doorkeeper.rb#L4-L10' target='_blank'>bu yerdan</a> ko'ring."
       #context: and asking the user "The application will be able to"
       scopes:
         public: "Ommaviy ma'lumotlaringizga kirish (ism, WCA ID, jinsi, fuqaroligi va profil rasmi)"
